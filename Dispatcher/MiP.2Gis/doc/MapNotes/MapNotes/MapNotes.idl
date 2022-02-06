@@ -1,0 +1,26 @@
+// MapNotes.idl : IDL source for MapNotes
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MapNotes.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(8E8A4ED5-CDD4-410D-ACE6-B59E80ABFA27),
+	version(1.0),
+	helpstring("MapNotes 1.0 Type Library")
+]
+library MapNotesLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(9830376F-576E-4557-B4D2-F0AFEE1413AE),
+		helpstring("MapNotesPlugin Class")
+	]
+	coclass MapNotesPlugin
+	{
+		[default] interface IUnknown;
+	};
+};

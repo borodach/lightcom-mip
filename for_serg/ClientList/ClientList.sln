@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientList", "ClientList\ClientList.csproj", "{B9E9EA63-5529-424D-96C4-0A2F20E1A36A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClientList", "TestClientList\TestClientList.csproj", "{9F7F353B-9655-4DEA-86E2-51DB9D4FB069}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B9E9EA63-5529-424D-96C4-0A2F20E1A36A}.Debug.ActiveCfg = Debug|.NET
+		{B9E9EA63-5529-424D-96C4-0A2F20E1A36A}.Debug.Build.0 = Debug|.NET
+		{B9E9EA63-5529-424D-96C4-0A2F20E1A36A}.Release.ActiveCfg = Release|.NET
+		{B9E9EA63-5529-424D-96C4-0A2F20E1A36A}.Release.Build.0 = Release|.NET
+		{9F7F353B-9655-4DEA-86E2-51DB9D4FB069}.Debug.ActiveCfg = Debug|.NET
+		{9F7F353B-9655-4DEA-86E2-51DB9D4FB069}.Debug.Build.0 = Debug|.NET
+		{9F7F353B-9655-4DEA-86E2-51DB9D4FB069}.Release.ActiveCfg = Release|.NET
+		{9F7F353B-9655-4DEA-86E2-51DB9D4FB069}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[PluginInstaller.vdproj]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/LightCom/.NET/MiP/Dispatcher/PluginInstaller", ZHCAAAAA

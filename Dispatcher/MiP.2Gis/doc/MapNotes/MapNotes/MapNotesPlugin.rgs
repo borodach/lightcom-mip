@@ -1,0 +1,26 @@
+HKCR
+{
+	MapNotes.MapNotesPlugin.1 = s 'MapNotesPlugin Class'
+	{
+		CLSID = s '{9830376F-576E-4557-B4D2-F0AFEE1413AE}'
+	}
+	MapNotes.MapNotesPlugin = s 'MapNotesPlugin Class'
+	{
+		CLSID = s '{9830376F-576E-4557-B4D2-F0AFEE1413AE}'
+		CurVer = s 'MapNotes.MapNotesPlugin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9830376F-576E-4557-B4D2-F0AFEE1413AE} = s 'MapNotesPlugin Class'
+		{
+			ProgID = s 'MapNotes.MapNotesPlugin.1'
+			VersionIndependentProgID = s 'MapNotes.MapNotesPlugin'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{8E8A4ED5-CDD4-410D-ACE6-B59E80ABFA27}'
+		}
+	}
+}

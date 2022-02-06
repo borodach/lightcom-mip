@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<settings>
+  <webMapsListSource source="" />
+  <mapCount count="1" />
+  <map1 name="Novosibirsk" rusName="Новосибирск" lastUpdate="10/01/2006" state="1" mapDirectory="maps\novosibirsk\" mapCode="1" mapFile="novosibirsk.xml" />
+</settings>

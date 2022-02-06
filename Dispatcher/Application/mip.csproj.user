@@ -1,0 +1,57 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastOpenVersion>7.10.3077</LastOpenVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ReferencePath>D:\VC#Projects\Common\Common\bin\Release\;d:\vc#projects\mapwindowctrl\mapwindowctrl\bin\release\;d:\vc#projects\gpsdataplayerctrl\gpsdataplayerctrl\bin\release\;d:\vc#projects\gpsdataplayerctrl\gpsdataplayerctrl\bin\debug\;d:\vc#projects\mapwindowctrl\mapwindowctrl\bin\debug\;d:\vc#projects\clientlist\clientlist\bin\release\;D:\VS70\Projects\VC#Projects\clientlist\clientlist\bin\release\;D:\VS70\Projects\VC#Projects\gpsdataplayerctrl\gpsdataplayerctrl\bin\release\;D:\VS70\Projects\VC#Projects\mapwindowctrl\mapwindowctrl\bin\release\</ReferencePath>
+    <CopyProjectDestinationFolder>
+    </CopyProjectDestinationFolder>
+    <CopyProjectUncPath>
+    </CopyProjectUncPath>
+    <CopyProjectOption>0</CopyProjectOption>
+    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectTrust>0</ProjectTrust>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+</Project>

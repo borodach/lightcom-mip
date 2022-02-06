@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="2gis-SDK:Библиотека типов GrymCore,BaseCollection,Callout,CalloutStandardButtonType,CategoryGrymPlugin,ComponentDimension,DeviceType,Grym,IAcceleratorTable,IBarControl,IBaseCollection" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="http://plugins.2gis.ru/licence/licence-full-text" />
+		<title>2gis-SDK:Библиотека типов GrymCore — 2gis-SDK</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "main.css-7.css"/*tpa=http://plugins.2gis.ru/wiki/skins/monobook/main.css?7*/; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="commonPrint.css" tppabs="http://plugins.2gis.ru/wiki/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "IE50Fixes.css"/*tpa=http://plugins.2gis.ru/wiki/skins/monobook/IE50Fixes.css*/;</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "IE55Fixes.css"/*tpa=http://plugins.2gis.ru/wiki/skins/monobook/IE55Fixes.css*/;</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "IE60Fixes.css"/*tpa=http://plugins.2gis.ru/wiki/skins/monobook/IE60Fixes.css*/;</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "IE70Fixes.css-1.css"/*tpa=http://plugins.2gis.ru/wiki/skins/monobook/IE70Fixes.css?1*/;</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="IEFixes.js" tppabs="http://plugins.2gis.ru/wiki/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/wiki/skins';</script>
+		<script type="text/javascript" src="wikibits.js" tppabs="http://plugins.2gis.ru/wiki/skins/common/wikibits.js"><!-- wikibits js --></script>
+		<script type="text/javascript" src="index.php-title=-&action=raw&gen=js" tppabs="http://plugins.2gis.ru/wiki/index.php?title=-&action=raw&gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "index.php-title=MediaWiki-Common.css&action=raw&ctype=text-css&smaxage=18000.css"/*tpa=http://plugins.2gis.ru/wiki/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000*/;
+@import "index.php-title=MediaWiki-Monobook.css&action=raw&ctype=text-css&smaxage=18000.css"/*tpa=http://plugins.2gis.ru/wiki/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000*/;
+@import "index.php-title=-&action=raw&gen=css&maxage=18000.css"/*tpa=http://plugins.2gis.ru/wiki/index.php?title=-&action=raw&gen=css&maxage=18000*/;
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-4 ltr">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">2gis-SDK:Библиотека типов GrymCore</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">Материал из 2gis-SDK.</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Перейти к: <a href="#column-one">навигация</a>, <a href="#searchInput">поиск</a></div>			<!-- start content -->
+			<p align="justify">COM-библиотека типов <b>Grym Core Library</b> декларирует открытые интерфейсы API ДубльГИС. Библиотека включена в главный модуль приложения <b>Grym.exe</b> и регистрируется в операционной системе при первом запуске приложения. После запуска приложения библиотека типов становится доступной для импорта. Ниже приведена спецификация IDL библиотеки и полный алфавитный перечень деклараций всех типов, в нее входящих. В панели <b>"справочник"</b> расположен перечень интерфейсов библиотеки, разбитых на функциональные категории.</p>
+<hr />
+<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class='toclevel-1'><a href="#.D0.A1.D0.BF.D0.B5.D1.86.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.86.D0.B8.D1.8F_IDL"><span class="tocnumber">1</span> <span class="toctext">Спецификация IDL</span></a></li>
+<li class='toclevel-1'><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D0.BE.D0.B2"><span class="tocnumber">2</span> <span class="toctext">Перечень интерфейсов</span></a></li>
+<li class='toclevel-1'><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D0.BE.D0.B2_.D1.81.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D0.B9"><span class="tocnumber">3</span> <span class="toctext">Перечень интерфейсов событий</span></a></li>
+<li class='toclevel-1'><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.BA.D0.BE-.D0.BA.D0.BB.D0.B0.D1.81.D1.81.D0.BE.D0.B2_API"><span class="tocnumber">4</span> <span class="toctext">Перечень ко-классов API</span></a></li>
+<li class='toclevel-1'><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.BA.D0.BE.D0.BD.D1.81.D1.82.D0.B0.D0.BD.D1.82"><span class="tocnumber">5</span> <span class="toctext">Перечень констант</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.A1.D0.BF.D0.B5.D1.86.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.86.D0.B8.D1.8F_IDL"></a><h5>Спецификация IDL</h5>
+<pre>
+[
+	uuid(7AA02C95-0B4A-43aa-92D8-BA40511A7F3F),
+	version(1.0),
+	helpstring(&quot;GrymCore 1.0 Type Library&quot;)
+]
+library GrymCore
+{
+	importlib(&quot;stdole2.tlb&quot;);
+
+        ......
+};
+</pre>
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D0.BE.D0.B2"></a><h5>Перечень интерфейсов</h5>
+<table border="0" frame="void" rules="all" width="100%" cellspacing="1" cellpadding="4" style="background-color: #000000; text-align: justify;">
+
+
+<tr bgcolor="#FF6820" style="color: #FFFFFF">
+<th>Наименование
+</th><th>Категория
+</th></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IAcceleratorTable.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IAcceleratorTable" title="IAcceleratorTable">IAcceleratorTable</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IBarControl.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBarControl" title="IBarControl">IBarControl</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IBaseCollection.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBaseCollection" title="IBaseCollection">IBaseCollection</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IBaseIterator.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBaseIterator" title="IBaseIterator">IBaseIterator</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IBaseReference.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBaseReference" title="IBaseReference">IBaseReference</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IBaseViewThread.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBaseViewThread" title="IBaseViewThread">IBaseViewThread</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IBitmap.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBitmap" title="IBitmap">IBitmap</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICallout.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICallout" title="ICallout">ICallout</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ICommandAccelerator.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandAccelerator" title="ICommandAccelerator">ICommandAccelerator</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICommandAction.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandAction" title="ICommandAction">ICommandAction</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ICommandAppearance.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandAppearance" title="ICommandAppearance">ICommandAppearance</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICommandLine.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandLine" title="ICommandLine">ICommandLine</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ICommandPlacement.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandPlacement" title="ICommandPlacement">ICommandPlacement</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICommandSet.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandSet" title="ICommandSet">ICommandSet</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ICommandState.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICommandState" title="ICommandState">ICommandState</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IContextBase.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IContextBase" title="IContextBase">IContextBase</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IControlState.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IControlState" title="IControlState">IControlState</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICustomDirectoryPage.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICustomDirectoryPage" title="ICustomDirectoryPage">ICustomDirectoryPage</a>
+</td><td><a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8" title="Справочники">Справочники</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IDevice.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDevice" title="IDevice">IDevice</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IDevPoint.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDevPoint" title="IDevPoint">IDevPoint</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IDevRect.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDevRect" title="IDevRect">IDevRect</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IDevSize.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDevSize" title="IDevSize">IDevSize</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IDirectory.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDirectory" title="IDirectory">IDirectory</a>
+</td><td><a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8" title="Справочники">Справочники</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IDirectoryPage.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDirectoryPage" title="IDirectoryPage">IDirectoryPage</a>
+</td><td><a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8" title="Справочники">Справочники</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IDirectoryPageState.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IDirectoryPageState" title="IDirectoryPageState">IDirectoryPageState</a>
+</td><td><a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8" title="Справочники">Справочники</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IGraphicBase.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGraphicBase" title="IGraphicBase">IGraphicBase</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IGraphicCustom.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGraphicCustom" title="IGraphicCustom">IGraphicCustom</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IGraphicCustomActive.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGraphicCustomActive" title="IGraphicCustomActive">IGraphicCustomActive</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IGrym.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrym" title="IGrym">IGrym</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IGrymObjectFactory.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrymObjectFactory" title="IGrymObjectFactory">IGrymObjectFactory</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IGrymPlugin.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrymPlugin" title="IGrymPlugin">IGrymPlugin</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IGrymPluginInfo.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrymPluginInfo" title="IGrymPluginInfo">IGrymPluginInfo</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IGrymPluginOptions.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrymPluginOptions" title="IGrymPluginOptions">IGrymPluginOptions</a>
+</td><td><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация, визуализация и настройка модуля</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IIdleHandler.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IIdleHandler" title="IIdleHandler">IIdleHandler</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ILayer.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ILayer" title="ILayer">ILayer</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ILayerIterator.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ILayerIterator" title="ILayerIterator">ILayerIterator</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IMainToolBar.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMainToolBar" title="IMainToolBar">IMainToolBar</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IMap.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMap" title="IMap">IMap</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IMapGraphics.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMapGraphics" title="IMapGraphics">IMapGraphics</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IMapPoint.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMapPoint" title="IMapPoint">IMapPoint</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IMapRect.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMapRect" title="IMapRect">IMapRect</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IMenu.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IMenu" title="IMenu">IMenu</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IPopupMenu.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IPopupMenu" title="IPopupMenu">IPopupMenu</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IPopupMenuMapViewContext.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IPopupMenuMapViewContext" title="IPopupMenuMapViewContext">IPopupMenuMapViewContext</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IPluginManager.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IPluginManager" title="IPluginManager">IPluginManager</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IPluginShapeCursor.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IPluginShapeCursor" title="IPluginShapeCursor">IPluginShapeCursor</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IPluginShapeLayer.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IPluginShapeLayer" title="IPluginShapeLayer">IPluginShapeLayer</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ISearchPanel.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ISearchPanel" title="ISearchPanel">ISearchPanel</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IShapeFill.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IShapeFill" title="IShapeFill">IShapeFill</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IStretchedBarControl.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IStretchedBarControl" title="IStretchedBarControl">IStretchedBarControl</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ISubMenu.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ISubMenu" title="ISubMenu">ISubMenu</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="IThread.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IThread" title="IThread">IThread</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ITool.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ITool" title="ITool">ITool</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr></table><br />
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D1.84.D0.B5.D0.B9.D1.81.D0.BE.D0.B2_.D1.81.D0.BE.D0.B1.D1.8B.D1.82.D0.B8.D0.B9"></a><h5>Перечень интерфейсов событий</h5>
+<table border="0" frame="void" rules="all" width="100%" cellspacing="1" cellpadding="4" style="background-color: black; text-align: justify;">
+
+
+<tr bgcolor="#FF6820" style="color: #FFFFFF">
+<th>Наименование
+</th><th>Категория
+</th></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IBaseCollectionEvents.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IBaseCollectionEvents" title="IBaseCollectionEvents">_IBaseCollectionEvents</a>
+</td><td><a href="Интерфейсы_событий.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9" title="Интерфейсы событий">Интерфейсы событий</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="ICalloutEvents.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ICalloutEvents" title="ICalloutEvents">_ICalloutEvents</a>
+</td><td><a href="Интерфейсы_событий.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9" title="Интерфейсы событий">Интерфейсы событий</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="IGrymEvents.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/IGrymEvents" title="IGrymEvents">_IGrymEvents</a>
+</td><td><a href="Интерфейсы_событий.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9" title="Интерфейсы событий">Интерфейсы событий</a>
+</td></tr></table><br />
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.BA.D0.BE-.D0.BA.D0.BB.D0.B0.D1.81.D1.81.D0.BE.D0.B2_API"></a><h5>Перечень ко-классов API</h5>
+<table border="0" frame="void" rules="all" width="100%" cellspacing="1" cellpadding="4" style="background-color: black; text-align: justify;">
+
+
+<tr bgcolor="#FF6820" style="color: #FFFFFF">
+<th>Наименование
+</th><th>Категория
+</th></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="BaseCollection.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/BaseCollection" title="BaseCollection">BaseCollection</a>
+</td><td><a href="Ко-классы_API.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9A%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B_API" title="Ко-классы API">Ко-классы API</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="Callout.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/Callout" title="Callout">Callout</a>
+</td><td><a href="Ко-классы_API.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9A%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B_API" title="Ко-классы API">Ко-классы API</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="Grym.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/Grym" title="Grym">Grym</a>
+</td><td><a href="Ко-классы_API.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9A%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B_API" title="Ко-классы API">Ко-классы API</a>
+</td></tr></table><br />
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B5.D0.BD.D1.8C_.D0.BA.D0.BE.D0.BD.D1.81.D1.82.D0.B0.D0.BD.D1.82"></a><h5>Перечень констант</h5>
+<table border="0" frame="void" rules="all" width="100%" cellspacing="1" cellpadding="4" style="background-color: black; text-align: justify;">
+
+
+<tr bgcolor="#FF6820" style="color: #FFFFFF">
+<th>Наименование
+</th><th>Категория
+</th></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="CalloutStandardButtonType.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/CalloutStandardButtonType" title="CalloutStandardButtonType">CalloutStandardButtonType</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="CategoryGrymPlugin.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/CategoryGrymPlugin" title="CategoryGrymPlugin">CategoryGrymPlugin</a>
+</td><td><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="ComponentDimension.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/ComponentDimension" title="ComponentDimension">ComponentDimension</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="DeviceType.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/DeviceType" title="DeviceType">DeviceType</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr>
+<tr bgcolor="#F8F8F8">
+<td><a href="MouseButton.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/MouseButton" title="MouseButton">MouseButton</a>
+</td><td><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Объекты пользовательского интерфейса оболочки</a>
+</td></tr>
+<tr bgcolor="#E8E8E8">
+<td><a href="SymbolImageType.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/SymbolImageType" title="SymbolImageType">SymbolImageType</a>
+</td><td><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Управление графическими объектами</a>
+</td></tr></table><br />
+<p align="justify"><br /><b>Смотри также:</b> <a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F" title="Инициализация, визуализация и настройка модуля">Инициализация модуля</a>, <a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Главные объекты приложения">Главные объекты приложения</a>, <a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8" title="Объекты пользовательского интерфейса оболочки">Пользовательский интерфейс</a>, <a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8" title="Управление графическими объектами">Графика</a>, <a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8" title="Справочники">Справочники</a>, <a href="Интерфейсы_событий.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9" title="Интерфейсы событий">Интерфейсы событий</a>, <a href="Ко-классы_API.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9A%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B_API" title="Ко-классы API">Ко-классы API</a></p>
+<div class="printfooter">
+Получено с <a href="2gis-SDK-Библиотека_типов_GrymCore.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore">http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore</a></div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Просмотры</h5>
+		<ul>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Личные инструменты</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="javascript:if(confirm('http://plugins.2gis.ru/wiki/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Userlogin&returnto=2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://plugins.2gis.ru/wiki/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Userlogin&returnto=2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore'" tppabs="http://plugins.2gis.ru/wiki/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Userlogin&returnto=2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore">Представиться системе</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/skins/monobook/wiki_logo.gif);" href="2gis-SDK-Инструментарий_разработчика.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0" title="2gis-SDK:Инструментарий разработчика"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-navigation'>
+		<h5>Навигация</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-portal"><a href="2gis-SDK-Инструментарий_разработчика.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0">О проекте</a></li>
+				<li id="n-currentevents"><a href="javascript:if(confirm('http://plugins.2gis.ru/licence/licence-full-text  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://plugins.2gis.ru/licence/licence-full-text'" tppabs="http://plugins.2gis.ru/licence/licence-full-text">Лицензионное соглашение</a></li>
+				<li id="n-help"><a href="2gis-SDK-Справка.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0">Как пользоваться справочником</a></li>
+				<li id="n-recentchanges"><a href="2gis-SDK-Библиотека_типов_GrymCore.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2_GrymCore">Библиотека GrymCore</a></li>
+				<li id="n-randompage"><a href="javascript:if(confirm('http://plugins.2gis.ru/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://plugins.2gis.ru/'" tppabs="http://plugins.2gis.ru/">Сайт ДубльГИС</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-reference'>
+		<h5>Справочник</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-refgroup1"><a href="Инициализация,_визуализация_и_настройка_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%2C_%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F">Инициализация модуля</a></li>
+				<li id="n-refgroup4"><a href="Главные_объекты_приложения.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">Главные объекты приложения</a></li>
+				<li id="n-refgroup3"><a href="Объекты_пользовательского_интерфейса_оболочки.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0_%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B8">Пользовательский интерфейс</a></li>
+				<li id="n-refgroup2"><a href="Управление_графическими_объектами.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC%D0%B8_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8">Графика</a></li>
+				<li id="n-refgroup5"><a href="Справочники.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8">Справочники</a></li>
+				<li id="n-refgroup6page"><a href="Интерфейсы_событий.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D1%8B_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">Интерфейсы событий</a></li>
+				<li id="n-refgroup7page"><a href="Ко-классы_API.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%9A%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B_API">Ко-классы API</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-tutorials'>
+		<h5>Практика</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-tut1"><a href="Инициализация_дополнительного_модуля.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/%D0%98%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F">Инициализация модуля</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Поиск</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://plugins.2gis.ru/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Перейти" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Поиск" />
+			</div></form>
+		</div>
+	</div>
+
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" tppabs="http://plugins.2gis.ru/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+			<ul id="f-list">
+				<li id="copyright"><a href="javascript:if(confirm('http://plugins.2gis.ru/licence/licence-full-text  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://plugins.2gis.ru/licence/licence-full-text'" tppabs="http://plugins.2gis.ru/licence/licence-full-text" class='external ' title="http://plugins.2gis.ru/licence/licence-full-text" rel="nofollow">Лицензионное соглашение</a></li>
+				<li id="about"><a href="2gis-SDK-Инструментарий_разработчика.htm" tppabs="http://plugins.2gis.ru/wiki/index.php/2gis-SDK:%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0" title="2gis-SDK:Инструментарий разработчика">О проекте ДубльГИС-SDK</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by frontend.2gis.ru in 0.45 secs. -->
+</body></html>

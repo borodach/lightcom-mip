@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSDataPlayerCtrl", "GPSDataPlayerCtrl\GPSDataPlayerCtrl.csproj", "{DDE770EE-1EE7-435B-AA07-2E13035EBEE6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{451A75E8-DAE5-409E-A62A-D9CCBE35E9C7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DDE770EE-1EE7-435B-AA07-2E13035EBEE6}.Debug.ActiveCfg = Debug|.NET
+		{DDE770EE-1EE7-435B-AA07-2E13035EBEE6}.Debug.Build.0 = Debug|.NET
+		{DDE770EE-1EE7-435B-AA07-2E13035EBEE6}.Release.ActiveCfg = Release|.NET
+		{DDE770EE-1EE7-435B-AA07-2E13035EBEE6}.Release.Build.0 = Release|.NET
+		{451A75E8-DAE5-409E-A62A-D9CCBE35E9C7}.Debug.ActiveCfg = Debug|.NET
+		{451A75E8-DAE5-409E-A62A-D9CCBE35E9C7}.Debug.Build.0 = Debug|.NET
+		{451A75E8-DAE5-409E-A62A-D9CCBE35E9C7}.Release.ActiveCfg = Release|.NET
+		{451A75E8-DAE5-409E-A62A-D9CCBE35E9C7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

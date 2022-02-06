@@ -1,0 +1,10 @@
+; MapNotes.def : Declares the module parameters.
+
+LIBRARY      "MapNotes.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	CreateGrymPlugin	PRIVATE

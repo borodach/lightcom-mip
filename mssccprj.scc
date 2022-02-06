@@ -1,0 +1,25 @@
+SCC = This is a Source Code Control file
+
+[gps.sln]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/gps", SAAAAAAA
+
+[gps_client.csdproj]
+SCC_Aux_Path = "F:\SourceSafe"
+SCC_Project_Name = "$/gps/SRC", ERBAAAAA
+
+[dispatcher.csproj]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/gps", SAAAAAAA
+
+[EndPoint.csdproj]
+SCC_Aux_Path = "G:\VSS"
+SCC_Project_Name = "$/gps", SAAAAAAA
+
+[EndPoint.csproj]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/LightCom/.NET/MiP", SAAAAAAA
+
+[CEClient.csproj]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/LightCom/.NET/MiP", SAAAAAAA

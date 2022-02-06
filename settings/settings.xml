@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<settings>
+  <Publisher URL="" URL1="http://kud.unicon.ru/new/gate.php" User="" Password="" BackupURL="" BackupUser="" BackupPassword="" />
+  <Transmitter MaxSendTimeOut="600" MinSendTimeOut="30000" WaitTimeout="0" MaxQueueSize="16" ClientId="client" Port="COM7:" BaudRate="57600" />
+  <Map Gx="82,811790243456" Gy="55,082951142253" dx="6,66983921255528E-05" dy="-3,23352059162475E-05" UseSimpleAlgorithmFirst="0"/>
+</settings>

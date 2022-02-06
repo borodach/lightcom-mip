@@ -1,0 +1,24 @@
+<HTML>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<HEAD><TITLE>Command frame</TITLE>
+<BODY>
+<FORM>
+    <TABLE WIDTH="100%">
+    <TR>
+        <TD WIDTH="100%">
+            <TEXTAREA NAME="query" cols="160" rows="10" ID="query"></TEXTAREA>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <INPUT TYPE="BUTTON" 
+                   NAME="Execute" 
+                   ID="Execute" 
+                   VALUE="Execute query" 
+                   onClick="parent.frames(0).document.forms(0).query.value = query.value; parent.frames(0).document.forms(0).submit ();">
+        </TD>
+    </TR>
+    </TABLE>
+</FORM>
+</BODY>
+</HTML>

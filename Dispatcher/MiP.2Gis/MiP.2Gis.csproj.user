@@ -1,0 +1,8 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>E:\LightCom\Projects\.NET\MiP\Dispatcher\MiP.2Gis\BetaVersion\grym.exe</StartProgram>
+    <StartArguments>-NoMTA Novosibirsk.dgdat</StartArguments>
+    <StartWorkingDirectory>E:\LightCom\Projects\.NET\MiP\Dispatcher\MiP.2Gis\BetaVersion\</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

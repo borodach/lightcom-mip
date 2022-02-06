@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<settings>
+	<mapName name="Novosibirsk"/>
+	<mapType type="city"/>
+	<mapGEODimension left="82.873703181630" top="55.076002977143" right="" bottom="" gx="0.000025409348" gy="0.000014679905" />
+	<mapDirectory mapFilesDirectory="maps\Novosibirsk\" filesCount="2"/>
+	<mapFile1 name="1.bmp" left="0" top="0" width="2048" height="2048"/>
+	<mapFile2 name="2.bmp" left="0" top="0" width="2048" height="2048"/>
+</settings>

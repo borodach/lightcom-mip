@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<settings>
+  <GPS Port="COM7:" BaudRate="57600" />
+  <Calibration Distantion="20" Dx="1,0" Dy="-1,0" />
+</settings>
